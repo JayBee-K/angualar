@@ -1,2 +1,6 @@
 <h3>Đây là component home</h3>
-<h2>Chào bạn {{ name }}</h2>
+<br>
+<input type="text" [(ngModel)]="name">
+<h2 *ngIf="name != ''">Chào bạn {{ name }}</h2>
+<br>
+<button type="button" (click)="resetName()">Reset Tên</button>

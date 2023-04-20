@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
 })
 export class HomeComponent {
   public name = 'JayBee K';
+
+  public resetName() {
+    this.name = '';
+  }
 }
