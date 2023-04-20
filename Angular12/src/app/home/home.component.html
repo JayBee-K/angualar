@@ -1,16 +1,8 @@
-<h3>Đây là component home</h3>
-
-<br>
-
-<input type="text" [(ngModel)]="age">
-
-<br>
-
-<ng-template #tre><h2>Bạn còn trẻ quá !</h2></ng-template>
-
-<ng-template #gia><h2>Bạn đã già rồi !</h2></ng-template>
-
-<ng-template *ngIf="age < 18; then tre else gia"></ng-template>
-
-<br>
-<button type="button" (click)="resetAge()">Reset Tuổi</button>
+<ul>
+	<ng-template ngFor let-item [ngForOf]="arrFruit" let-i="index">
+		<li>{{item}}</li>
+	</ng-template>
+	<li *ngFor="let fruit of arrFruit; let i = index">
+		{{fruit}}
+	</li>
+</ul>
