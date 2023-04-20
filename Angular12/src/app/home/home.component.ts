@@ -6,9 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public name = 'JayBee K';
+  public age = 15;
 
-  public resetName() {
-    this.name = '';
+  public resetAge() {
+    this.age = 0;
   }
 }
