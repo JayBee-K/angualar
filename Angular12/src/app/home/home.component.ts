@@ -12,5 +12,29 @@ export class HomeComponent {
         'Cam',
     ]
 
-    public ngOnInit(): void {}
+    public objFruit = [
+        {
+            name: 'Táo',
+            price: 19000,
+            sale: true
+        },
+        {
+            name: 'Bưởi',
+            price: 21000,
+            sale: true
+        },
+        {
+            name: 'Cam',
+            price: 22000,
+            sale: false
+        },
+        {
+            name: 'Quýt',
+            price: -15000,
+            sale: true
+        },
+    ]
+
+    public ngOnInit(): void {
+    }
 }

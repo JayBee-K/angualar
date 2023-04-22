@@ -6,3 +6,22 @@
 		{{fruit}}
 	</li>
 </ul>
+
+<table class="table">
+	<tr>
+		<th>STT</th>
+		<th>Tên</th>
+		<th>Giá</th>
+		<th>Sale</th>
+	</tr>
+	<tr *ngFor="let fruit of objFruit; let i = index">
+		<td>{{ i + 1 }}</td>
+		<td>{{ fruit.name }}</td>
+		<td>
+			<span [ngClass]="{ 'so-am': fruit.price < 0 }">{{ fruit.price }}</span>
+		</td>
+		<td>
+			<span *ngIf="fruit.sale">Đang giảm giá</span>
+		</td>
+	</tr>
+</table>
