@@ -16,22 +16,26 @@ export class HomeComponent {
         {
             name: 'Táo',
             price: 19000,
-            sale: true
+            sale: true,
+            date: '2023-12-20',
         },
         {
             name: 'Bưởi',
             price: 21000,
-            sale: true
+            sale: true,
+            date: '2023-12-20',
         },
         {
             name: 'Cam',
             price: 22000,
-            sale: false
+            sale: false,
+            date: '2023/12/20',
         },
         {
             name: 'Quýt',
             price: -15000,
-            sale: true
+            sale: true,
+            date: '2023-12-20',
         },
     ]
 

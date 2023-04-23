@@ -13,15 +13,19 @@
 		<th>Tên</th>
 		<th>Giá</th>
 		<th>Sale</th>
+		<th>Ngày giảm giá</th>
 	</tr>
 	<tr *ngFor="let fruit of objFruit; let i = index">
 		<td>{{ i + 1 }}</td>
-		<td>{{ fruit.name }}</td>
+		<td>{{ fruit.name | uppercase }}</td>
 		<td>
-			<span [ngClass]="{ 'so-am': fruit.price < 0 }">{{ fruit.price }}</span>
+			<span [ngClass]="{ 'so-am': fruit.price < 0 }">{{ fruit.price | currency:'₫' }}</span>
 		</td>
 		<td>
-			<span *ngIf="fruit.sale">Đang giảm giá</span>
+			<span *ngIf="fruit.sale">{{fruit.sale | onSale | uppercase}}</span>
+		</td>
+		<td>
+			<span>{{ fruit.date | date:'d/M/Y'}}</span>
 		</td>
 	</tr>
 </table>
