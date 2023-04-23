@@ -39,6 +39,24 @@ export class HomeComponent {
         },
     ]
 
-    public ngOnInit(): void {
-    }
+    public objCities = [
+        {
+            name: 'Cần Thơ',
+            district: [
+                'Quận Ninh Kiều',
+                'Quận Cái Răng',
+                'Quận Bình Thuỷ',
+                'Huyện Phong Điền',
+                'Huyện Ô Môn',
+            ]
+        }, {
+            name: 'Sóc Trăng',
+            district: [
+                'Huyện Trần Đề',
+                'Huyện Kế Sách',
+                'Huyện Mỹ Xuyên',
+                'Huyện Châu Thành',
+            ]
+        }
+    ]
 }

@@ -1,4 +1,4 @@
-<ul>
+<!--<ul>
 	<ng-template ngFor let-item [ngForOf]="arrFruit" let-i="index">
 		<li>{{item}}</li>
 	</ng-template>
@@ -28,4 +28,13 @@
 			<span>{{ fruit.date | date:'d/M/Y'}}</span>
 		</td>
 	</tr>
-</table>
+</table>-->
+
+<select class="form-control" name="" id="">
+	<option value="">Chọn Tỉnh/Thành</option>
+	<option *ngFor="let city of objCities; let i = index" value="{{i}}">
+		{{city.name}}
+	</option>
+</select>
+
+<div class="alert bg-success">31513531</div>

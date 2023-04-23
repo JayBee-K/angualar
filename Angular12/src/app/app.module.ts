@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import { OnSalePipe } from './on-sale.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { OnSalePipe } from './on-sale.pipe';
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        NgbModule,
     ],
     providers: [
         {provide: DEFAULT_CURRENCY_CODE, useValue: '₫'}
