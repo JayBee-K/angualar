@@ -1,40 +1,51 @@
-<!--<ul>
-	<ng-template ngFor let-item [ngForOf]="arrFruit" let-i="index">
-		<li>{{item}}</li>
-	</ng-template>
-	<li *ngFor="let fruit of arrFruit; let i = index">
-		{{fruit}}
-	</li>
-</ul>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
 
-<table class="table">
-	<tr>
-		<th>STT</th>
-		<th>Tên</th>
-		<th>Giá</th>
-		<th>Sale</th>
-		<th>Ngày giảm giá</th>
-	</tr>
-	<tr *ngFor="let fruit of objFruit; let i = index">
-		<td>{{ i + 1 }}</td>
-		<td>{{ fruit.name | uppercase }}</td>
-		<td>
-			<span [ngClass]="{ 'so-am': fruit.price < 0 }">{{ fruit.price | currency:'₫' }}</span>
-		</td>
-		<td>
-			<span *ngIf="fruit.sale">{{fruit.sale | onSale | uppercase}}</span>
-		</td>
-		<td>
-			<span>{{ fruit.date | date:'d/M/Y'}}</span>
-		</td>
-	</tr>
-</table>-->
+			<!--<ul>
+				<ng-template ngFor let-item [ngForOf]="arrFruit" let-i="index">
+					<li>{{item}}</li>
+				</ng-template>
+				<li *ngFor="let fruit of arrFruit; let i = index">
+					{{fruit}}
+				</li>
+			</ul>
 
-<select class="form-control" name="" id="">
-	<option value="">Chọn Tỉnh/Thành</option>
-	<option *ngFor="let city of objCities; let i = index" value="{{i}}">
-		{{city.name}}
-	</option>
-</select>
+			<table class="table">
+				<tr>
+					<th>STT</th>
+					<th>Tên</th>
+					<th>Giá</th>
+					<th>Sale</th>
+					<th>Ngày giảm giá</th>
+				</tr>
+				<tr *ngFor="let fruit of objFruit; let i = index">
+					<td>{{ i + 1 }}</td>
+					<td>{{ fruit.name | uppercase }}</td>
+					<td>
+						<span [ngClass]="{ 'so-am': fruit.price < 0 }">{{ fruit.price | currency:'₫' }}</span>
+					</td>
+					<td>
+						<span *ngIf="fruit.sale">{{fruit.sale | onSale | uppercase}}</span>
+					</td>
+					<td>
+						<span>{{ fruit.date | date:'d/M/Y'}}</span>
+					</td>
+				</tr>
+			</table>-->
 
-<div class="alert bg-success">31513531</div>
+			<select class="form-control" name="city" id="city" (change)="changeCity($event)">
+				<option value="-1">Chọn Tỉnh/Thành</option>
+				<option *ngFor="let city of objCities; let i = index" value="{{city.name}}">
+					{{city.name}}
+				</option>
+			</select>
+			<select class="form-control" name="district" id="district">
+				<option value="-1">Chọn Quận/Huyện</option>
+				<option *ngFor="let district of districts; let i = index" value="{{district}}">
+					{{district}}
+				</option>
+			</select>
+		</div>
+	</div>
+</div>

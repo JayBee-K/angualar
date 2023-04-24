@@ -59,4 +59,24 @@ export class HomeComponent {
             ]
         }
     ]
+
+    public districts: string [] = [];
+
+    public changeCity(event: any): void {
+        const city = event.target.value;
+        if (!city) {
+            return;
+        }
+
+        // Cách 1
+
+        /*const listDistrict = this.objCities.filter(data => data.name === city);
+        if (listDistrict && listDistrict.length > 0) {
+            this.districts = listDistrict[0].district;
+        }*/
+
+        // Cách 2
+        // tìm data.name===city trong objCities => nếu có thì trả về district (?.) => không thì array null
+        this.districts = this.objCities.find(data => data.name === city)?.district || [];
+    }
 }
