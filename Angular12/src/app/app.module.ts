@@ -9,6 +9,8 @@ import { OnSalePipe } from './on-sale.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import { IndexComponent } from './index/index.component';
         HomeComponent,
         OnSalePipe,
         PageNotFoundComponent,
-        IndexComponent
+        IndexComponent,
+        AboutComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
