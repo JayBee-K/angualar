@@ -1,3 +1,10 @@
 <p>about works!</p>
 
-<h1>Hi, Tôi đang học Angular12</h1>
+<h2>Pick a highlight color</h2>
+<div class="d-flex align-items-center justify-content-center">
+  <input type="radio" name="colors" class="mx-1" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" class="mx-1" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" class="mx-1" (click)="color='cyan'">Cyan
+</div>
+
+<p [appHighLight]="color">Hi, Tôi đang học Angular12</p>

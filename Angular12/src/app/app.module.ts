@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { IndexComponent } from './index/index.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import { HighLightDirective } from './Directives/high-light.directive';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
         PageNotFoundComponent,
         IndexComponent,
         AboutComponent,
-        LoginComponent
+        LoginComponent,
+        HighLightDirective
     ],
     imports: [
         BrowserModule,

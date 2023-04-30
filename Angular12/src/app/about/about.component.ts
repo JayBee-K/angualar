@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Directive} from "@angular/core";
 
 @Component({
   selector: 'app-about',
@@ -6,5 +7,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-
+  color = '';
 }
