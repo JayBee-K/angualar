@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Directive} from "@angular/core";
+import {CommonService} from "../Services/common.service";
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,16 @@ import {Directive} from "@angular/core";
 })
 export class AboutComponent {
   color = '';
+
+  public counter = 0;
+  public counterBinhPhuong = 0;
+
+  constructor(private common: CommonService) {
+  }
+
+  ngOnInit(): void {
+    this.counter = this.common.counter;
+    this.counterBinhPhuong = this.common.binhPhuong(this.counter);
+    this.common.counter++;
+  }
 }
